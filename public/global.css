@@ -1,0 +1,1219 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;125,603&display=swap');
+
+:root {
+	/* Color styles */
+	--sys--light--primary: rgba(142, 64, 134, 1);
+	--sys--light--on-primary: rgba(255, 255, 255, 1);
+	--sys--light--primary-container: rgba(255, 214, 245, 1);
+	--sys--light--on-primary-container: rgba(56, 0, 55, 1);
+	--sys--light--secondary: rgba(110, 87, 104, 1);
+	--sys--light--on-secondary: rgba(255, 255, 255, 1);
+	--sys--light--secondary-container: rgba(248, 218, 238, 1);
+	--sys--light--on-secondary-container: rgba(38, 22, 35, 1);
+	--sys--light--tertiary: rgba(130, 83, 68, 1);
+	--sys--light--on-tertiary: rgba(255, 255, 255, 1);
+	--sys--light--tertiary-container: rgba(255, 219, 207, 1);
+	--sys--light--on-tertiary-container: rgba(50, 18, 7, 1);
+	--sys--light--error: rgba(186, 27, 27, 1);
+	--sys--light--error-container: rgba(255, 218, 212, 1);
+	--sys--light--on-error: rgba(255, 255, 255, 1);
+	--sys--light--on-error-container: rgba(65, 0, 1, 1);
+	--sys--light--background: rgba(252, 252, 252, 1);
+	--sys--light--on-background: rgba(31, 26, 29, 1);
+	--sys--light--surface: rgba(252, 252, 252, 1);
+	--sys--light--on-surface: rgba(31, 26, 29, 1);
+	--sys--light--surface-variant: rgba(238, 223, 231, 1);
+	--sys--light--on-surface-variant: rgba(78, 68, 75, 1);
+	--sys--light--outline: rgba(128, 115, 123, 1);
+	--sys--light--inverse-on-surface: rgba(248, 238, 242, 1);
+	--sys--light--inverse-surface: rgba(52, 47, 50, 1);
+	--sys--light--inverse-primary: rgba(255, 170, 242, 1);
+	--sys--light--shadow: rgba(0, 0, 0, 1);
+	--sys--dark--primary: rgba(255, 170, 242, 1);
+	--sys--dark--on-primary: rgba(88, 13, 84, 1);
+	--sys--dark--primary-container: rgba(115, 40, 108, 1);
+	--sys--dark--on-primary-container: rgba(255, 214, 245, 1);
+	--sys--dark--secondary: rgba(219, 190, 210, 1);
+	--sys--dark--on-secondary: rgba(61, 42, 57, 1);
+	--sys--dark--secondary-container: rgba(85, 64, 80, 1);
+	--sys--dark--on-secondary-container: rgba(248, 218, 238, 1);
+	--sys--dark--tertiary: rgba(245, 185, 166, 1);
+	--sys--dark--on-tertiary: rgba(76, 38, 25, 1);
+	--sys--dark--tertiary-container: rgba(102, 60, 46, 1);
+	--sys--dark--on-tertiary-container: rgba(255, 219, 207, 1);
+	--sys--dark--error: rgba(255, 180, 169, 1);
+	--sys--dark--error-container: rgba(147, 0, 6, 1);
+	--sys--dark--on-error: rgba(104, 0, 3, 1);
+	--sys--dark--on-error-container: rgba(255, 218, 212, 1);
+	--sys--dark--background: rgba(31, 26, 29, 1);
+	--sys--dark--on-background: rgba(234, 224, 228, 1);
+	--sys--dark--surface: rgba(31, 26, 29, 1);
+	--sys--dark--on-surface: rgba(234, 224, 228, 1);
+	--sys--dark--surface-variant: rgba(78, 68, 75, 1);
+	--sys--dark--on-surface-variant: rgba(209, 195, 203, 1);
+	--sys--dark--outline: rgba(154, 141, 149, 1);
+	--sys--dark--inverse-on-surface: rgba(31, 26, 29, 1);
+	--sys--dark--inverse-surface: rgba(234, 224, 228, 1);
+	--sys--dark--inverse-primary: rgba(142, 64, 134, 1);
+	--sys--dark--shadow: rgba(0, 0, 0, 1);
+	--ref--primary--primary100: rgba(255, 255, 255, 1);
+	--ref--primary--primary99: rgba(252, 252, 252, 1);
+	--ref--primary--primary95: rgba(255, 235, 248, 1);
+	--ref--primary--primary90: rgba(255, 214, 245, 1);
+	--ref--primary--primary80: rgba(255, 170, 242, 1);
+	--ref--primary--primary70: rgba(230, 141, 216, 1);
+	--ref--primary--primary60: rgba(200, 115, 187, 1);
+	--ref--primary--primary50: rgba(171, 90, 160, 1);
+	--ref--primary--primary40: rgba(142, 64, 134, 1);
+	--ref--primary--primary30: rgba(115, 40, 108, 1);
+	--ref--primary--primary20: rgba(88, 13, 84, 1);
+	--ref--primary--primary10: rgba(56, 0, 55, 1);
+	--ref--primary--primary0: rgba(0, 0, 0, 1);
+	--ref--secondary--secondary100: rgba(255, 255, 255, 1);
+	--ref--secondary--secondary99: rgba(252, 252, 252, 1);
+	--ref--secondary--secondary95: rgba(255, 235, 248, 1);
+	--ref--secondary--secondary90: rgba(248, 218, 238, 1);
+	--ref--secondary--secondary80: rgba(219, 190, 210, 1);
+	--ref--secondary--secondary70: rgba(190, 164, 182, 1);
+	--ref--secondary--secondary60: rgba(163, 137, 155, 1);
+	--ref--secondary--secondary50: rgba(136, 112, 129, 1);
+	--ref--secondary--secondary40: rgba(110, 87, 104, 1);
+	--ref--secondary--secondary30: rgba(85, 64, 80, 1);
+	--ref--secondary--secondary20: rgba(61, 42, 57, 1);
+	--ref--secondary--secondary10: rgba(38, 22, 35, 1);
+	--ref--secondary--secondary0: rgba(0, 0, 0, 1);
+	--ref--tertiary--tertiary100: rgba(255, 255, 255, 1);
+	--ref--tertiary--tertiary99: rgba(252, 252, 252, 1);
+	--ref--tertiary--tertiary95: rgba(255, 237, 231, 1);
+	--ref--tertiary--tertiary90: rgba(255, 219, 207, 1);
+	--ref--tertiary--tertiary80: rgba(245, 185, 166, 1);
+	--ref--tertiary--tertiary70: rgba(216, 158, 140, 1);
+	--ref--tertiary--tertiary60: rgba(186, 132, 115, 1);
+	--ref--tertiary--tertiary50: rgba(157, 107, 91, 1);
+	--ref--tertiary--tertiary40: rgba(130, 83, 68, 1);
+	--ref--tertiary--tertiary30: rgba(102, 60, 46, 1);
+	--ref--tertiary--tertiary20: rgba(76, 38, 25, 1);
+	--ref--tertiary--tertiary10: rgba(50, 18, 7, 1);
+	--ref--tertiary--tertiary0: rgba(0, 0, 0, 1);
+	--ref--neutral--neutral100: rgba(255, 255, 255, 1);
+	--ref--neutral--neutral99: rgba(252, 252, 252, 1);
+	--ref--neutral--neutral95: rgba(248, 238, 242, 1);
+	--ref--neutral--neutral90: rgba(234, 224, 228, 1);
+	--ref--neutral--neutral80: rgba(204, 196, 199, 1);
+	--ref--neutral--neutral70: rgba(178, 169, 173, 1);
+	--ref--neutral--neutral60: rgba(150, 143, 146, 1);
+	--ref--neutral--neutral50: rgba(124, 117, 120, 1);
+	--ref--neutral--neutral40: rgba(99, 93, 96, 1);
+	--ref--neutral--neutral30: rgba(75, 69, 72, 1);
+	--ref--neutral--neutral20: rgba(52, 47, 50, 1);
+	--ref--neutral--neutral10: rgba(31, 26, 29, 1);
+	--ref--neutral--neutral0: rgba(0, 0, 0, 1);
+	--ref--neutral-variant--neutral-variant100: rgba(255, 255, 255, 1);
+	--ref--neutral-variant--neutral-variant99: rgba(252, 252, 252, 1);
+	--ref--neutral-variant--neutral-variant95: rgba(253, 236, 245, 1);
+	--ref--neutral-variant--neutral-variant90: rgba(238, 223, 231, 1);
+	--ref--neutral-variant--neutral-variant80: rgba(209, 195, 203, 1);
+	--ref--neutral-variant--neutral-variant70: rgba(182, 167, 176, 1);
+	--ref--neutral-variant--neutral-variant60: rgba(154, 141, 149, 1);
+	--ref--neutral-variant--neutral-variant50: rgba(128, 115, 123, 1);
+	--ref--neutral-variant--neutral-variant40: rgba(102, 91, 98, 1);
+	--ref--neutral-variant--neutral-variant30: rgba(78, 68, 75, 1);
+	--ref--neutral-variant--neutral-variant20: rgba(55, 46, 52, 1);
+	--ref--neutral-variant--neutral-variant10: rgba(33, 25, 31, 1);
+	--ref--neutral-variant--neutral-variant0: rgba(0, 0, 0, 1);
+	--ref--error--error100: rgba(255, 255, 255, 1);
+	--ref--error--error99: rgba(252, 252, 252, 1);
+	--ref--error--error95: rgba(255, 237, 233, 1);
+	--ref--error--error90: rgba(255, 218, 212, 1);
+	--ref--error--error80: rgba(255, 180, 169, 1);
+	--ref--error--error70: rgba(255, 137, 122, 1);
+	--ref--error--error60: rgba(255, 84, 73, 1);
+	--ref--error--error50: rgba(221, 55, 48, 1);
+	--ref--error--error40: rgba(186, 27, 27, 1);
+	--ref--error--error30: rgba(147, 0, 6, 1);
+	--ref--error--error20: rgba(104, 0, 3, 1);
+	--ref--error--error10: rgba(65, 0, 1, 1);
+	--ref--error--error0: rgba(0, 0, 0, 1);
+	--source---seed: rgba(97, 23, 92, 1);
+	--source---primary: rgba(142, 64, 134, 1);
+	--source---secondary: rgba(110, 87, 104, 1);
+	--source---tertiary: rgba(130, 83, 68, 1);
+	--source---neutral: rgba(99, 93, 96, 1);
+	--source---neutral--variant: rgba(102, 91, 98, 1);
+	--source---error: rgba(186, 27, 27, 1);
+	--read-only--light--surface1: rgba(252, 252, 252, 1);
+	--read-only--light--surface2: rgba(252, 252, 252, 1);
+	--read-only--light--surface3: rgba(252, 252, 252, 1);
+	--read-only--light--surface4: rgba(252, 252, 252, 1);
+	--read-only--light--surface5: rgba(252, 252, 252, 1);
+	--read-only--light--black: rgba(0, 0, 0, 1);
+	--read-only--light--white: rgba(255, 255, 255, 1);
+	--read-only--light--primary--opacity-008: rgba(
+		142,
+		64,
+		134,
+		0.07999999821186066
+	);
+	--read-only--light--primary--opacity-012: rgba(
+		142,
+		64,
+		134,
+		0.11999999731779099
+	);
+	--read-only--light--primary--opacity-016: rgba(
+		142,
+		64,
+		134,
+		0.1599999964237213
+	);
+	--read-only--light--on-primary--opacity-008: rgba(
+		255,
+		255,
+		255,
+		0.07999999821186066
+	);
+	--read-only--light--on-primary--opacity-012: rgba(
+		255,
+		255,
+		255,
+		0.11999999731779099
+	);
+	--read-only--light--on-primary--opacity-016: rgba(
+		255,
+		255,
+		255,
+		0.1599999964237213
+	);
+	--read-only--light--primary-container--opacity-008: rgba(
+		255,
+		214,
+		245,
+		0.07999999821186066
+	);
+	--read-only--light--primary-container--opacity-012: rgba(
+		255,
+		214,
+		245,
+		0.11999999731779099
+	);
+	--read-only--light--primary-container--opacity-016: rgba(
+		255,
+		214,
+		245,
+		0.1599999964237213
+	);
+	--read-only--light--on-primary-container--opacity-008: rgba(
+		56,
+		0,
+		55,
+		0.07999999821186066
+	);
+	--read-only--light--on-primary-container--opacity-012: rgba(
+		56,
+		0,
+		55,
+		0.11999999731779099
+	);
+	--read-only--light--on-primary-container--opacity-016: rgba(
+		56,
+		0,
+		55,
+		0.1599999964237213
+	);
+	--read-only--light--secondary--opacity-008: rgba(
+		110,
+		87,
+		104,
+		0.07999999821186066
+	);
+	--read-only--light--secondary--opacity-012: rgba(
+		110,
+		87,
+		104,
+		0.11999999731779099
+	);
+	--read-only--light--secondary--opacity-016: rgba(
+		110,
+		87,
+		104,
+		0.1599999964237213
+	);
+	--read-only--light--on-secondary--opacity-008: rgba(
+		255,
+		255,
+		255,
+		0.07999999821186066
+	);
+	--read-only--light--on-secondary--opacity-012: rgba(
+		255,
+		255,
+		255,
+		0.11999999731779099
+	);
+	--read-only--light--on-secondary--opacity-016: rgba(
+		255,
+		255,
+		255,
+		0.1599999964237213
+	);
+	--read-only--light--secondary-container--opacity-008: rgba(
+		248,
+		218,
+		238,
+		0.07999999821186066
+	);
+	--read-only--light--secondary-container--opacity-012: rgba(
+		248,
+		218,
+		238,
+		0.11999999731779099
+	);
+	--read-only--light--secondary-container--opacity-016: rgba(
+		248,
+		218,
+		238,
+		0.1599999964237213
+	);
+	--read-only--light--on-secondary-container--opacity-008: rgba(
+		38,
+		22,
+		35,
+		0.07999999821186066
+	);
+	--read-only--light--on-secondary-container--opacity-012: rgba(
+		38,
+		22,
+		35,
+		0.11999999731779099
+	);
+	--read-only--light--on-secondary-container--opacity-016: rgba(
+		38,
+		22,
+		35,
+		0.1599999964237213
+	);
+	--read-only--light--tertiary--opacity-008: rgba(
+		130,
+		83,
+		68,
+		0.07999999821186066
+	);
+	--read-only--light--tertiary--opacity-012: rgba(
+		130,
+		83,
+		68,
+		0.11999999731779099
+	);
+	--read-only--light--tertiary--opacity-016: rgba(
+		130,
+		83,
+		68,
+		0.1599999964237213
+	);
+	--read-only--light--on-tertiary--opacity-008: rgba(
+		255,
+		255,
+		255,
+		0.07999999821186066
+	);
+	--read-only--light--on-tertiary--opacity-012: rgba(
+		255,
+		255,
+		255,
+		0.11999999731779099
+	);
+	--read-only--light--on-tertiary--opacity-016: rgba(
+		255,
+		255,
+		255,
+		0.1599999964237213
+	);
+	--read-only--light--tertiary-container--opacity-008: rgba(
+		255,
+		219,
+		207,
+		0.07999999821186066
+	);
+	--read-only--light--tertiary-container--opacity-012: rgba(
+		255,
+		219,
+		207,
+		0.11999999731779099
+	);
+	--read-only--light--tertiary-container--opacity-016: rgba(
+		255,
+		219,
+		207,
+		0.1599999964237213
+	);
+	--read-only--light--on-tertiary-container--opacity-008: rgba(
+		50,
+		18,
+		7,
+		0.07999999821186066
+	);
+	--read-only--light--on-tertiary-container--opacity-012: rgba(
+		50,
+		18,
+		7,
+		0.11999999731779099
+	);
+	--read-only--light--on-tertiary-container--opacity-016: rgba(
+		50,
+		18,
+		7,
+		0.1599999964237213
+	);
+	--read-only--light--error--opacity-008: rgba(
+		186,
+		27,
+		27,
+		0.07999999821186066
+	);
+	--read-only--light--error--opacity-012: rgba(
+		186,
+		27,
+		27,
+		0.11999999731779099
+	);
+	--read-only--light--error--opacity-016: rgba(
+		186,
+		27,
+		27,
+		0.1599999964237213
+	);
+	--read-only--light--error-container--opacity-008: rgba(
+		255,
+		218,
+		212,
+		0.07999999821186066
+	);
+	--read-only--light--error-container--opacity-012: rgba(
+		255,
+		218,
+		212,
+		0.11999999731779099
+	);
+	--read-only--light--error-container--opacity-016: rgba(
+		255,
+		218,
+		212,
+		0.1599999964237213
+	);
+	--read-only--light--on-error--opacity-008: rgba(
+		255,
+		255,
+		255,
+		0.07999999821186066
+	);
+	--read-only--light--on-error--opacity-012: rgba(
+		255,
+		255,
+		255,
+		0.11999999731779099
+	);
+	--read-only--light--on-error--opacity-016: rgba(
+		255,
+		255,
+		255,
+		0.1599999964237213
+	);
+	--read-only--light--on-error-container--opacity-008: rgba(
+		65,
+		0,
+		1,
+		0.07999999821186066
+	);
+	--read-only--light--on-error-container--opacity-012: rgba(
+		65,
+		0,
+		1,
+		0.11999999731779099
+	);
+	--read-only--light--on-error-container--opacity-016: rgba(
+		65,
+		0,
+		1,
+		0.1599999964237213
+	);
+	--read-only--light--background--opacity-008: rgba(
+		252,
+		252,
+		252,
+		0.07999999821186066
+	);
+	--read-only--light--background--opacity-012: rgba(
+		252,
+		252,
+		252,
+		0.11999999731779099
+	);
+	--read-only--light--background--opacity-016: rgba(
+		252,
+		252,
+		252,
+		0.1599999964237213
+	);
+	--read-only--light--on-background--opacity-008: rgba(
+		31,
+		26,
+		29,
+		0.07999999821186066
+	);
+	--read-only--light--on-background--opacity-012: rgba(
+		31,
+		26,
+		29,
+		0.11999999731779099
+	);
+	--read-only--light--on-background--opacity-016: rgba(
+		31,
+		26,
+		29,
+		0.1599999964237213
+	);
+	--read-only--light--surface--opacity-008: rgba(
+		252,
+		252,
+		252,
+		0.07999999821186066
+	);
+	--read-only--light--surface--opacity-012: rgba(
+		252,
+		252,
+		252,
+		0.11999999731779099
+	);
+	--read-only--light--surface--opacity-016: rgba(
+		252,
+		252,
+		252,
+		0.1599999964237213
+	);
+	--read-only--light--on-surface--opacity-008: rgba(
+		31,
+		26,
+		29,
+		0.07999999821186066
+	);
+	--read-only--light--on-surface--opacity-012: rgba(
+		31,
+		26,
+		29,
+		0.11999999731779099
+	);
+	--read-only--light--on-surface--opacity-016: rgba(
+		31,
+		26,
+		29,
+		0.1599999964237213
+	);
+	--read-only--light--surface-variant--opacity-008: rgba(
+		238,
+		223,
+		231,
+		0.07999999821186066
+	);
+	--read-only--light--surface-variant--opacity-012: rgba(
+		238,
+		223,
+		231,
+		0.11999999731779099
+	);
+	--read-only--light--surface-variant--opacity-016: rgba(
+		238,
+		223,
+		231,
+		0.1599999964237213
+	);
+	--read-only--light--on-surface-variant--opacity-008: rgba(
+		78,
+		68,
+		75,
+		0.07999999821186066
+	);
+	--read-only--light--on-surface-variant--opacity-012: rgba(
+		78,
+		68,
+		75,
+		0.11999999731779099
+	);
+	--read-only--light--on-surface-variant--opacity-016: rgba(
+		78,
+		68,
+		75,
+		0.1599999964237213
+	);
+	--read-only--light--outline--opacity-008: rgba(
+		128,
+		115,
+		123,
+		0.07999999821186066
+	);
+	--read-only--light--outline--opacity-012: rgba(
+		128,
+		115,
+		123,
+		0.11999999731779099
+	);
+	--read-only--light--outline--opacity-016: rgba(
+		128,
+		115,
+		123,
+		0.1599999964237213
+	);
+	--read-only--light--inverse-on-surface--opacity-008: rgba(
+		248,
+		238,
+		242,
+		0.07999999821186066
+	);
+	--read-only--light--inverse-on-surface--opacity-012: rgba(
+		248,
+		238,
+		242,
+		0.11999999731779099
+	);
+	--read-only--light--inverse-on-surface--opacity-016: rgba(
+		248,
+		238,
+		242,
+		0.1599999964237213
+	);
+	--read-only--light--inverse-surface--opacity-008: rgba(
+		52,
+		47,
+		50,
+		0.07999999821186066
+	);
+	--read-only--light--inverse-surface--opacity-012: rgba(
+		52,
+		47,
+		50,
+		0.11999999731779099
+	);
+	--read-only--light--inverse-surface--opacity-016: rgba(
+		52,
+		47,
+		50,
+		0.1599999964237213
+	);
+	--read-only--light--inverse-primary--opacity-008: rgba(
+		255,
+		170,
+		242,
+		0.07999999821186066
+	);
+	--read-only--light--inverse-primary--opacity-012: rgba(
+		255,
+		170,
+		242,
+		0.11999999731779099
+	);
+	--read-only--light--inverse-primary--opacity-016: rgba(
+		255,
+		170,
+		242,
+		0.1599999964237213
+	);
+	--read-only--light--shadow--opacity-008: rgba(0, 0, 0, 0.07999999821186066);
+	--read-only--light--shadow--opacity-012: rgba(0, 0, 0, 0.11999999731779099);
+	--read-only--light--shadow--opacity-016: rgba(0, 0, 0, 0.1599999964237213);
+	--read-only--dark--surface1: rgba(31, 26, 29, 1);
+	--read-only--dark--surface2: rgba(31, 26, 29, 1);
+	--read-only--dark--surface3: #ffaaf21c;
+	--read-only--dark--surface4: rgba(31, 26, 29, 1);
+	--read-only--dark--surface5: rgba(31, 26, 29, 1);
+	--read-only--dark--white: rgba(255, 255, 255, 1);
+	--read-only--dark--black: rgba(0, 0, 0, 1);
+	--read-only--dark--primary--opacity-008: rgba(
+		255,
+		170,
+		242,
+		0.07999999821186066
+	);
+	--read-only--dark--primary--opacity-012: rgba(
+		255,
+		170,
+		242,
+		0.11999999731779099
+	);
+	--read-only--dark--primary--opacity-016: rgba(
+		255,
+		170,
+		242,
+		0.1599999964237213
+	);
+	--read-only--dark--on-primary--opacity-008: rgba(
+		88,
+		13,
+		84,
+		0.07999999821186066
+	);
+	--read-only--dark--on-primary--opacity-012: rgba(
+		88,
+		13,
+		84,
+		0.11999999731779099
+	);
+	--read-only--dark--on-primary--opacity-016: rgba(
+		88,
+		13,
+		84,
+		0.1599999964237213
+	);
+	--read-only--dark--primary-container--opacity-008: rgba(
+		115,
+		40,
+		108,
+		0.07999999821186066
+	);
+	--read-only--dark--primary-container--opacity-012: rgba(
+		115,
+		40,
+		108,
+		0.11999999731779099
+	);
+	--read-only--dark--primary-container--opacity-016: rgba(
+		115,
+		40,
+		108,
+		0.1599999964237213
+	);
+	--read-only--dark--on-primary-container--opacity-008: rgba(
+		255,
+		214,
+		245,
+		0.07999999821186066
+	);
+	--read-only--dark--on-primary-container--opacity-012: rgba(
+		255,
+		214,
+		245,
+		0.11999999731779099
+	);
+	--read-only--dark--on-primary-container--opacity-016: rgba(
+		255,
+		214,
+		245,
+		0.1599999964237213
+	);
+	--read-only--dark--secondary--opacity-008: rgba(
+		219,
+		190,
+		210,
+		0.07999999821186066
+	);
+	--read-only--dark--secondary--opacity-012: rgba(
+		219,
+		190,
+		210,
+		0.11999999731779099
+	);
+	--read-only--dark--secondary--opacity-016: rgba(
+		219,
+		190,
+		210,
+		0.1599999964237213
+	);
+	--read-only--dark--on-secondary--opacity-008: rgba(
+		61,
+		42,
+		57,
+		0.07999999821186066
+	);
+	--read-only--dark--on-secondary--opacity-012: rgba(
+		61,
+		42,
+		57,
+		0.11999999731779099
+	);
+	--read-only--dark--on-secondary--opacity-016: rgba(
+		61,
+		42,
+		57,
+		0.1599999964237213
+	);
+	--read-only--dark--secondary-container--opacity-008: rgba(
+		85,
+		64,
+		80,
+		0.07999999821186066
+	);
+	--read-only--dark--secondary-container--opacity-012: rgba(
+		85,
+		64,
+		80,
+		0.11999999731779099
+	);
+	--read-only--dark--secondary-container--opacity-016: rgba(
+		85,
+		64,
+		80,
+		0.1599999964237213
+	);
+	--read-only--dark--on-secondary-container--opacity-008: rgba(
+		248,
+		218,
+		238,
+		0.07999999821186066
+	);
+	--read-only--dark--on-secondary-container--opacity-012: rgba(
+		248,
+		218,
+		238,
+		0.11999999731779099
+	);
+	--read-only--dark--on-secondary-container--opacity-016: rgba(
+		248,
+		218,
+		238,
+		0.1599999964237213
+	);
+	--read-only--dark--tertiary--opacity-008: rgba(
+		245,
+		185,
+		166,
+		0.07999999821186066
+	);
+	--read-only--dark--tertiary--opacity-012: rgba(
+		245,
+		185,
+		166,
+		0.11999999731779099
+	);
+	--read-only--dark--tertiary--opacity-016: rgba(
+		245,
+		185,
+		166,
+		0.1599999964237213
+	);
+	--read-only--dark--on-tertiary--opacity-008: rgba(
+		76,
+		38,
+		25,
+		0.07999999821186066
+	);
+	--read-only--dark--on-tertiary--opacity-012: rgba(
+		76,
+		38,
+		25,
+		0.11999999731779099
+	);
+	--read-only--dark--on-tertiary--opacity-016: rgba(
+		76,
+		38,
+		25,
+		0.1599999964237213
+	);
+	--read-only--dark--tertiary-container--opacity-008: rgba(
+		102,
+		60,
+		46,
+		0.07999999821186066
+	);
+	--read-only--dark--tertiary-container--opacity-012: rgba(
+		102,
+		60,
+		46,
+		0.11999999731779099
+	);
+	--read-only--dark--tertiary-container--opacity-016: rgba(
+		102,
+		60,
+		46,
+		0.1599999964237213
+	);
+	--read-only--dark--on-tertiary-container--opacity-008: rgba(
+		255,
+		219,
+		207,
+		0.07999999821186066
+	);
+	--read-only--dark--on-tertiary-container--opacity-012: rgba(
+		255,
+		219,
+		207,
+		0.11999999731779099
+	);
+	--read-only--dark--on-tertiary-container--opacity-016: rgba(
+		255,
+		219,
+		207,
+		0.1599999964237213
+	);
+	--read-only--dark--error--opacity-008: rgba(
+		255,
+		180,
+		169,
+		0.07999999821186066
+	);
+	--read-only--dark--error--opacity-012: rgba(
+		255,
+		180,
+		169,
+		0.11999999731779099
+	);
+	--read-only--dark--error--opacity-016: rgba(
+		255,
+		180,
+		169,
+		0.1599999964237213
+	);
+	--read-only--dark--error-container--opacity-008: rgba(
+		147,
+		0,
+		6,
+		0.07999999821186066
+	);
+	--read-only--dark--error-container--opacity-012: rgba(
+		147,
+		0,
+		6,
+		0.11999999731779099
+	);
+	--read-only--dark--error-container--opacity-016: rgba(
+		147,
+		0,
+		6,
+		0.1599999964237213
+	);
+	--read-only--dark--on-error--opacity-008: rgba(
+		104,
+		0,
+		3,
+		0.07999999821186066
+	);
+	--read-only--dark--on-error--opacity-012: rgba(
+		104,
+		0,
+		3,
+		0.11999999731779099
+	);
+	--read-only--dark--on-error--opacity-016: rgba(
+		104,
+		0,
+		3,
+		0.1599999964237213
+	);
+	--read-only--dark--on-error-container--opacity-008: rgba(
+		255,
+		218,
+		212,
+		0.07999999821186066
+	);
+	--read-only--dark--on-error-container--opacity-012: rgba(
+		255,
+		218,
+		212,
+		0.11999999731779099
+	);
+	--read-only--dark--on-error-container--opacity-016: rgba(
+		255,
+		218,
+		212,
+		0.1599999964237213
+	);
+	--read-only--dark--background--opacity-008: rgba(
+		31,
+		26,
+		29,
+		0.07999999821186066
+	);
+	--read-only--dark--background--opacity-012: rgba(
+		31,
+		26,
+		29,
+		0.11999999731779099
+	);
+	--read-only--dark--background--opacity-016: rgba(
+		31,
+		26,
+		29,
+		0.1599999964237213
+	);
+	--read-only--dark--on-background--opacity-008: rgba(
+		234,
+		224,
+		228,
+		0.07999999821186066
+	);
+	--read-only--dark--on-background--opacity-012: rgba(
+		234,
+		224,
+		228,
+		0.11999999731779099
+	);
+	--read-only--dark--on-background--opacity-016: rgba(
+		234,
+		224,
+		228,
+		0.1599999964237213
+	);
+	--read-only--dark--surface--opacity-008: rgba(
+		31,
+		26,
+		29,
+		0.07999999821186066
+	);
+	--read-only--dark--surface--opacity-012: rgba(
+		31,
+		26,
+		29,
+		0.11999999731779099
+	);
+	--read-only--dark--surface--opacity-016: rgba(
+		31,
+		26,
+		29,
+		0.1599999964237213
+	);
+	--read-only--dark--on-surface--opacity-008: rgba(
+		234,
+		224,
+		228,
+		0.07999999821186066
+	);
+	--read-only--dark--on-surface--opacity-012: rgba(
+		234,
+		224,
+		228,
+		0.11999999731779099
+	);
+	--read-only--dark--on-surface--opacity-016: rgba(
+		234,
+		224,
+		228,
+		0.1599999964237213
+	);
+	--read-only--dark--surface-variant--opacity-008: rgba(
+		78,
+		68,
+		75,
+		0.07999999821186066
+	);
+	--read-only--dark--surface-variant--opacity-012: rgba(
+		78,
+		68,
+		75,
+		0.11999999731779099
+	);
+	--read-only--dark--surface-variant--opacity-016: rgba(
+		78,
+		68,
+		75,
+		0.1599999964237213
+	);
+	--read-only--dark--on-surface-variant--opacity-008: rgba(
+		209,
+		195,
+		203,
+		0.07999999821186066
+	);
+	--read-only--dark--on-surface-variant--opacity-012: rgba(
+		209,
+		195,
+		203,
+		0.11999999731779099
+	);
+	--read-only--dark--on-surface-variant--opacity-016: rgba(
+		209,
+		195,
+		203,
+		0.1599999964237213
+	);
+	--read-only--dark--outline--opacity-008: rgba(
+		154,
+		141,
+		149,
+		0.07999999821186066
+	);
+	--read-only--dark--outline--opacity-012: rgba(
+		154,
+		141,
+		149,
+		0.11999999731779099
+	);
+	--read-only--dark--outline--opacity-016: rgba(
+		154,
+		141,
+		149,
+		0.1599999964237213
+	);
+	--read-only--dark--inverse-on-surface--opacity-008: rgba(
+		31,
+		26,
+		29,
+		0.07999999821186066
+	);
+	--read-only--dark--inverse-on-surface--opacity-012: rgba(
+		31,
+		26,
+		29,
+		0.11999999731779099
+	);
+	--read-only--dark--inverse-on-surface--opacity-016: rgba(
+		31,
+		26,
+		29,
+		0.1599999964237213
+	);
+	--read-only--dark--inverse-surface--opacity-008: rgba(
+		234,
+		224,
+		228,
+		0.07999999821186066
+	);
+	--read-only--dark--inverse-surface--opacity-012: rgba(
+		234,
+		224,
+		228,
+		0.11999999731779099
+	);
+	--read-only--dark--inverse-surface--opacity-016: rgba(
+		234,
+		224,
+		228,
+		0.1599999964237213
+	);
+	--read-only--dark--inverse-primary--opacity-008: rgba(
+		142,
+		64,
+		134,
+		0.07999999821186066
+	);
+	--read-only--dark--inverse-primary--opacity-012: rgba(
+		142,
+		64,
+		134,
+		0.11999999731779099
+	);
+	--read-only--dark--inverse-primary--opacity-016: rgba(
+		142,
+		64,
+		134,
+		0.1599999964237213
+	);
+	--read-only--dark--shadow--opacity-008: rgba(0, 0, 0, 0.07999999821186066);
+	--read-only--dark--shadow--opacity-012: rgba(0, 0, 0, 0.11999999731779099);
+	--read-only--dark--shadow--opacity-016: rgba(0, 0, 0, 0.1599999964237213);
+
+	/* Effect styles */
+	--soft--shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+	--elevation--light--1: 0px 1px 3px rgba(0, 0, 0, 0.15),
+		0px 1px 2px rgba(0, 0, 0, 0.3);
+	--elevation--light--2: 0px 2px 6px rgba(0, 0, 0, 0.15),
+		0px 1px 2px rgba(0, 0, 0, 0.3);
+	--elevation--light--3: 0px 1px 3px rgba(0, 0, 0, 0.3),
+		0px 4px 8px rgba(0, 0, 0, 0.15);
+	--elevation--light--4: 0px 2px 3px rgba(0, 0, 0, 0.3),
+		0px 6px 10px rgba(0, 0, 0, 0.15);
+	--elevation--light--5: 0px 4px 4px rgba(0, 0, 0, 0.3),
+		0px 8px 12px rgba(0, 0, 0, 0.15);
+	--elevation--dark--1: 0px 1px 2px rgba(0, 0, 0, 0.3),
+		0px 1px 3px rgba(0, 0, 0, 0.15);
+	--elevation--dark--2: 0px 1px 2px rgba(0, 0, 0, 0.3),
+		0px 2px 6px rgba(0, 0, 0, 0.15);
+	--elevation--dark--3: 0px 1px 3px rgba(0, 0, 0, 0.3),
+		0px 4px 8px rgba(0, 0, 0, 0.15);
+	--elevation--dark--4: 0px 2px 3px rgba(0, 0, 0, 0.3),
+		0px 6px 10px rgba(0, 0, 0, 0.15);
+	--elevation--dark--5: 0px 4px 4px rgba(0, 0, 0, 0.3),
+		0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Text Styles */
+
+.titleMedium {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0.1px;
+}
+
+.headlineSmall {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px;
+	font-family: 'Archivo', sans-serif;
+	font-variation-settings: 'wdth' 125;
+}
+
+/* General Styles */
+
+html,
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Public Sans', sans-serif;
+}
+
+a {
+	color: rgb(0, 100, 200);
+	text-decoration: none;
+}
+
+img {
+	object-fit: cover;
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0, 80, 160);
+}
+
+label {
+	display: block;
+}
+
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
