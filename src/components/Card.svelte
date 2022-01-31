@@ -1,4 +1,5 @@
 <script>
+	import { fly } from 'svelte/transition';
 	export let user = {
 		username: 'Jack Trego',
 		profilePic:
@@ -11,6 +12,19 @@
 		review: 'Bloody and gory. Fun time.',
 		poster: 'https://images.pexels.com/photos/10705224/pexels-photo-10705224.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
 	};
+
+	let isLiked = false;
+
+	const likeCountChange = () => {
+		if (isLiked) {
+			isLiked = false;
+			likeCount--;
+		} else {
+			isLiked = true;
+			likeCount++;
+		}
+		console.log('hello world');
+	};
 </script>
 
 <div class="cardContain">
@@ -19,9 +33,21 @@
 			<img class="profilePic" src={user.profilePic} alt="User profile" />
 			<p class="titleMedium">{user.username}</p>
 		</div>
-		<div class="right">
-			<p class="titleMedium">{likeCount}</p>
-			<img class="icon" src="icons/like-empty.svg" alt="Like button" />
+		<div class="right" on:click={likeCountChange}>
+			{#key likeCount}
+				<p class="titleMedium" in:fly={{ y: -20, duration: 200 }}>
+					{likeCount}
+				</p>
+			{/key}
+			{#if isLiked}
+				<img class="icon" src="icons/like-full.svg" alt="Like button" />
+			{:else}
+				<img
+					class="icon"
+					src="icons/like-empty.svg"
+					alt="Like button"
+				/>
+			{/if}
 		</div>
 	</div>
 	<div class="content">

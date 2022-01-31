@@ -26,7 +26,7 @@
 			userReview: {
 				title: 'The Silence of the Lambs',
 				rating: '9/10',
-				review: 'Intriguing. Classic polic procedural. Good.',
+				review: 'Intriguing. Classic police procedural. Good.',
 				poster: 'https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg',
 			},
 		},
@@ -39,7 +39,7 @@
 			userReview: {
 				title: 'The Silence of the Lambs',
 				rating: '9/10',
-				review: 'Intriguing. Classic polic procedural. Good.',
+				review: 'Intriguing. Classic police procedural. Good.',
 				poster: 'https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg',
 			},
 		},
