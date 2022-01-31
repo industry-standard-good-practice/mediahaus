@@ -1,5 +1,6 @@
 <script>
 	import Card from './components/Card.svelte';
+	import TopBar from './components/TopBar.svelte';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	const contents = [
@@ -49,15 +50,18 @@
 </script>
 
 <main>
-	<div class="topBar" />
+	<TopBar />
 	<div class="container">
-		{#if ready}
+		{#key ready}
 			{#each contents as content, i}
-				<div transition:fly={{ y: 80, duration: 1000, delay: i * 200 }}>
+				<!-- <div transition:fly={{ y: 80, duration: 1000, delay: i * 200 }}>
+					<Card {...content} />
+				</div> -->
+				<div>
 					<Card {...content} />
 				</div>
 			{/each}
-		{/if}
+		{/key}
 	</div>
 </main>
 
@@ -76,16 +80,6 @@
 		gap: 16px;
 		padding: 16px;
 		overflow: hidden;
-		margin-top: 80px;
-	}
-
-	.topBar {
-		width: 100vw;
-		height: 80px;
-		background: black;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 9;
+		margin-top: 70px;
 	}
 </style>

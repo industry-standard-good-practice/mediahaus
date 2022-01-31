@@ -621,7 +621,7 @@
 	--read-only--light--shadow--opacity-012: rgba(0, 0, 0, 0.11999999731779099);
 	--read-only--light--shadow--opacity-016: rgba(0, 0, 0, 0.1599999964237213);
 	--read-only--dark--surface1: rgba(31, 26, 29, 1);
-	--read-only--dark--surface2: rgba(31, 26, 29, 1);
+	--read-only--dark--surface2: #ffaaf213;
 	--read-only--dark--surface3: #ffaaf21c;
 	--read-only--dark--surface4: rgba(31, 26, 29, 1);
 	--read-only--dark--surface5: rgba(31, 26, 29, 1);
