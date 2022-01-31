@@ -1,5 +1,5 @@
 <script>
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	export let user = {
 		username: 'Jack Trego',
 		profilePic:
@@ -8,7 +8,7 @@
 	export let likeCount = 0;
 	export let userReview = {
 		title: 'Pulp Fiction',
-		rating: '8.5/10',
+		rating: '8.5',
 		review: 'Bloody and gory. Fun time.',
 		poster: 'https://images.pexels.com/photos/10705224/pexels-photo-10705224.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
 	};
@@ -23,7 +23,6 @@
 			isLiked = true;
 			likeCount++;
 		}
-		console.log('hello world');
 	};
 </script>
 
@@ -40,12 +39,18 @@
 				</p>
 			{/key}
 			{#if isLiked}
-				<img class="icon" src="icons/like-full.svg" alt="Like button" />
+				<img
+					class="icon"
+					src="icons/like-full.svg"
+					alt="Like button"
+					transition:fade={{ duration: 200 }}
+				/>
 			{:else}
 				<img
 					class="icon"
 					src="icons/like-empty.svg"
 					alt="Like button"
+					transition:fade={{ duration: 200 }}
 				/>
 			{/if}
 		</div>
@@ -60,7 +65,7 @@
 				{userReview.title}
 			</p>
 			<p class="titleMedium" style="margin-bottom: 16px;">
-				{userReview.rating}
+				{userReview.rating} / 10
 			</p>
 			<p class="headlineSmall">{userReview.review}</p>
 		</div>
@@ -113,6 +118,11 @@
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
+		position: relative;
+	}
+
+	.right p {
+		margin-right: 32px;
 	}
 
 	.text {
@@ -121,5 +131,11 @@
 
 	p {
 		margin: 0;
+	}
+
+	.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 </style>

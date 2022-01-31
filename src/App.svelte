@@ -3,7 +3,7 @@
 	import TopBar from './components/TopBar.svelte';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	const contents = [
+	let contents = [
 		{
 			user: {
 				username: 'Noah Semus',
@@ -12,7 +12,7 @@
 			},
 			userReview: {
 				title: 'Pulp Fiction',
-				rating: '8.5/10',
+				rating: '8.5',
 				review: 'Bloody and gory. Fun time.',
 				poster: 'http://cdn.shopify.com/s/files/1/0969/9128/products/Pulp_Fiction_-_Uma_Thurman_Mia_Wallace_-_Quentin_Tarantino_Hollywood_Movie_Poster_b9d2e54b-a73e-46fc-8435-fcc672c41424_grande.jpg?v=1572088239',
 			},
@@ -25,7 +25,7 @@
 			},
 			userReview: {
 				title: 'The Silence of the Lambs',
-				rating: '9/10',
+				rating: '9',
 				review: 'Intriguing. Classic police procedural. Good.',
 				poster: 'https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg',
 			},
@@ -38,7 +38,7 @@
 			},
 			userReview: {
 				title: 'The Silence of the Lambs',
-				rating: '9/10',
+				rating: '9',
 				review: 'Intriguing. Classic police procedural. Good.',
 				poster: 'https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg',
 			},
@@ -54,10 +54,13 @@
 	<div class="container">
 		{#key ready}
 			{#each contents as content, i}
-				<!-- <div transition:fly={{ y: 80, duration: 1000, delay: i * 200 }}>
-					<Card {...content} />
-				</div> -->
-				<div>
+				<div
+					in:fly={{
+						y: 80,
+						duration: 1000,
+						delay: 200 * i,
+					}}
+				>
 					<Card {...content} />
 				</div>
 			{/each}
