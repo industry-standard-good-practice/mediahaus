@@ -3,14 +3,15 @@
 	export let user = {
 		username: 'Jack Trego',
 		profilePic:
-			'https://images.pexels.com/photos/3222422/pexels-photo-3222422.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+			'https://images.pexels.com/photos/3222422/pexels-photo-3222422.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
 	};
 	export let likeCount = 0;
 	export let userReview = {
 		title: 'Pulp Fiction',
 		rating: '8.5',
 		review: 'Bloody and gory. Fun time.',
-		poster: 'https://images.pexels.com/photos/10705224/pexels-photo-10705224.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+		poster:
+			'https://images.pexels.com/photos/10705224/pexels-photo-10705224.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
 	};
 
 	let isLiked = false;
@@ -58,10 +59,7 @@
 	<div class="content">
 		<img class="poster" src={userReview.poster} alt="Movie poster" />
 		<div class="text">
-			<p
-				class="titleMedium"
-				style="font-weight: 800; letter-spacing: 0.5px"
-			>
+			<p class="titleMedium" style="font-weight: 800; letter-spacing: 0.5px">
 				{userReview.title}
 			</p>
 			<p class="titleMedium" style="margin-bottom: 16px;">
