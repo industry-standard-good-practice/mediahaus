@@ -1,6 +1,52 @@
 <script>
+	import ForYouCard from '../components/ForYouCard.svelte';
 	import FriendCard from '../components/FriendCard.svelte';
 	import TopBar from '../components/TopBar.svelte';
+
+	let posts = [
+		{
+			user: {
+				username: 'Noah Semus',
+				profilePic:
+					'https://images.pexels.com/photos/3222422/pexels-photo-3222422.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
+			},
+			userReview: {
+				title: 'Pulp Fiction',
+				rating: '8.5',
+				review: 'A bloody, gory, fun masterpiece.',
+				poster:
+					'http://cdn.shopify.com/s/files/1/0969/9128/products/Pulp_Fiction_-_Uma_Thurman_Mia_Wallace_-_Quentin_Tarantino_Hollywood_Movie_Poster_b9d2e54b-a73e-46fc-8435-fcc672c41424_grande.jpg?v=1572088239'
+			}
+		},
+		{
+			user: {
+				username: 'Jack Trego',
+				profilePic:
+					'https://images.pexels.com/photos/6507483/pexels-photo-6507483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+			},
+			userReview: {
+				title: 'The Silence of the Lambs',
+				rating: '9',
+				review: 'Intriguing. Classic police procedural. Good.',
+				poster:
+					'https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg'
+			}
+		},
+		{
+			user: {
+				username: 'Jack Trego',
+				profilePic:
+					'https://images.pexels.com/photos/6507483/pexels-photo-6507483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+			},
+			userReview: {
+				title: 'The Silence of the Lambs',
+				rating: '9',
+				review: 'Intriguing. Classic police procedural. Good.',
+				poster:
+					'https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg'
+			}
+		}
+	];
 </script>
 
 <TopBar />
@@ -8,41 +54,51 @@
 	<section>
 		<h1>For You</h1>
 		<div class="carousel">
-			<a class="for-you-card active" href="somewhere">
-				<h2>Shawshank Redemption</h2>
-				<p>89% Rotten Tomatoes</p>
-				<img src="somewhere" alt="backgroundImage" />
-			</a>
-			<a class="for-you-card" href="somewhere">
-				<h2>Shawshank Redemption</h2>
-				<p>89% Rotten Tomatoes</p>
-				<img src="somewhere" alt="backgroundImage" />
-			</a>
+			<ForYouCard />
+			<ForYouCard />
+			<ForYouCard />
 		</div>
 	</section>
 	<section>
 		<h1>Popular Right Now</h1>
 		<div class="carousel">
 			<a href="somewhere" class="movie-poster">
-				<img src="somewhere" alt="Poster of Inception" />
+				<img
+					src="https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg"
+					alt="Poster of Inception"
+				/>
 			</a>
 			<a href="somewhere" class="movie-poster">
-				<img src="somewhere" alt="Poster of Inception" />
+				<img
+					src="https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg"
+					alt="Poster of Inception"
+				/>
 			</a>
 			<a href="somewhere" class="movie-poster">
-				<img src="somewhere" alt="Poster of Inception" />
+				<img
+					src="https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg"
+					alt="Poster of Inception"
+				/>
 			</a>
 			<a href="somewhere" class="movie-poster">
-				<img src="somewhere" alt="Poster of Inception" />
+				<img
+					src="https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg"
+					alt="Poster of Inception"
+				/>
 			</a>
 			<a href="somewhere" class="movie-poster">
-				<img src="somewhere" alt="Poster of Inception" />
+				<img
+					src="https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg"
+					alt="Poster of Inception"
+				/>
 			</a>
 		</div>
 	</section>
 	<section>
 		<h1>Friends</h1>
-		<FriendCard />
+		{#each posts as post}
+			<FriendCard {...post} />
+		{/each}
 	</section>
 </div>
 
@@ -129,39 +185,17 @@
 		scroll-snap-type: x mandatory
 		overflow-x: scroll
 
-	// For You
-
-	.for-you-card
-		position: relative
-		flex: 0
-		min-width: calc( 100vw - 32px )
-		height: 224px
-		display: flex
-		flex-direction: column
-		justify-content: flex-end
-		padding: 16px
-		border-radius: 16px
-		scroll-snap-align: center
-		background: rgba(255, 255, 255, .1)
-
-		&.active
-			border: 1px solid var(--primary)
-			filter: drop-shadow(0px 4px 20px rgba(255, 170, 242, 0.25))
-
-		img
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height:100%
-
 	// Popular
 
 	.movie-poster
+		position: relative
+		height: 211px
+		min-width: 135px
 		border-radius: 16px
 		border: 2px solid var(--surface-1)
+		overflow: hidden
 		
 		img
-			min-height: 211px
-			min-width: 135px
+			height: 100%
+			width: 100%
 </style>

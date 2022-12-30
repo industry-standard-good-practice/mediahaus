@@ -35,7 +35,7 @@
 		</div>
 		<div class="right" on:click={likeCountChange} on:keydown={likeCountChange}>
 			{#key likeCount}
-				<p in:fly={{ y: -20, duration: 200 }} out:fly={{ y: 10, duration: 200 }}>
+				<p in:fly={{ y: 10, duration: 200 }} out:fly={{ y: -20, duration: 200 }}>
 					{likeCount}
 				</p>
 			{/key}
