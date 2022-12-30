@@ -1,9 +1,35 @@
 <script>
+	import { inview } from 'svelte-inview';
+
+	let isInView = false;
+	let backgroundVideo;
+	const options = {
+		threshold: 0.5
+	};
+
+	const videoEnter = () => {
+		isInView = true;
+		backgroundVideo.play();
+		console.log('video is visible');
+	};
+
+	const videoLeave = () => {
+		isInView = false;
+		backgroundVideo.pause();
+		console.log('video is NOT visible');
+	};
+
 	let title = 'Shawshank Redemption';
 	let score = '89% Rotten Tomatoes';
 </script>
 
-<a class="for-you-card active" href="somewhere">
+<a
+	class="for-you-card {isInView ? 'active' : ''}"
+	href="somewhere"
+	use:inview={options}
+	on:enter={videoEnter}
+	on:leave={videoLeave}
+>
 	<h2>{title}</h2>
 	<p>{score}</p>
 	<video
@@ -11,6 +37,7 @@
 		muted
 		autoplay
 		loop
+		bind:this={backgroundVideo}
 	/>
 </a>
 
@@ -28,7 +55,8 @@
 		scroll-snap-align: center
 		background: rgba(255, 255, 255, .1)
 		overflow: hidden
-		border: 1px solid var(--primary)
+		border: 1px solid rgba(0, 0, 0, 0)
+		transition: all .4s ease
 
 		&.active
 			border: 1px solid var(--primary)

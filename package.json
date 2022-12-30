@@ -23,6 +23,7 @@
 	"type": "module",
 	"dependencies": {
 		"sass": "^1.57.1",
+		"svelte-inview": "^3.0.1",
 		"svelte-preprocess": "^5.0.0"
 	}
 }
