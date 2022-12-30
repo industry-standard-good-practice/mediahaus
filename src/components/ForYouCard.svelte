@@ -32,7 +32,7 @@
 
 		&.active
 			border: 1px solid var(--primary)
-			filter: drop-shadow(0px 4px 20px rgba(255, 170, 242, 0.25))
+			filter: drop-shadow(0px 4px 6px rgba(255, 170, 242, 0.25))
 
 		&::after
 			content: ''

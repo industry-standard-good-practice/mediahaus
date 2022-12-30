@@ -179,7 +179,8 @@
 		gap: 0px
 		width: 100vw
 		margin-left: -16px
-		padding: 0 16px
+		margin-top: -16px
+		padding: 16px
 		gap: 8px
 		flex-flow: row nowrap
 		scroll-snap-type: x mandatory
@@ -191,7 +192,7 @@
 		position: relative
 		height: 211px
 		min-width: 135px
-		border-radius: 16px
+		border-radius: 8px
 		border: 2px solid var(--surface-1)
 		overflow: hidden
 		
