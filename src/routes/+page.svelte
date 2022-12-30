@@ -47,6 +47,47 @@
 			}
 		}
 	];
+
+	let forYouData = [
+		{
+			title: 'Shawshank Redemption',
+			score: '89% Rotten Tomatoes',
+			src: 'https://vod-progressive.akamaized.net/exp=1672422479~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4680%2F7%2F198403893%2F668129116.mp4~hmac=f4a7d227e6fcb3374725f65741c441793cc91981e0310443925f2f367b28bab4/vimeo-prod-skyfire-std-us/01/4680/7/198403893/668129116.mp4'
+		},
+		{
+			title: 'Her',
+			score: '99% Rotten Tomatoes',
+			src: 'https://vod-progressive.akamaized.net/exp=1672432727~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4960%2F7%2F199804666%2F674256539.mp4~hmac=958c6e6f5dfb27a11aa23837800efd1893412718abebf580f6fe527c3f547ccc/vimeo-prod-skyfire-std-us/01/4960/7/199804666/674256539.mp4'
+		},
+		{
+			title: 'Shawshank Redemption',
+			score: '89% Rotten Tomatoes',
+			src: 'https://vod-progressive.akamaized.net/exp=1672422479~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4680%2F7%2F198403893%2F668129116.mp4~hmac=f4a7d227e6fcb3374725f65741c441793cc91981e0310443925f2f367b28bab4/vimeo-prod-skyfire-std-us/01/4680/7/198403893/668129116.mp4'
+		}
+	];
+
+	let popularData = [
+		{
+			src: 'https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg',
+			slug: 'Inception'
+		},
+		{
+			src: 'https://m.media-amazon.com/images/I/61PXdxTJGPL.jpg',
+			slug: 'Inglourious Basterds'
+		},
+		{
+			src: 'https://m.media-amazon.com/images/I/51unGrb-AAL._AC_.jpg',
+			slug: 'The Matrix'
+		},
+		{
+			src: 'https://m.media-amazon.com/images/I/51SNtj+h-TL._AC_.jpg',
+			slug: 'When Harry Met Sally'
+		},
+		{
+			src: 'https://m.media-amazon.com/images/I/51u15I5bJDL._AC_UF894,1000_QL80_.jpg',
+			slug: 'Hot Fuzz'
+		}
+	];
 </script>
 
 <TopBar />
@@ -54,44 +95,19 @@
 	<section>
 		<h1>For You</h1>
 		<div class="carousel">
-			<ForYouCard />
-			<ForYouCard />
-			<ForYouCard />
+			{#each forYouData as data}
+				<ForYouCard {...data} />
+			{/each}
 		</div>
 	</section>
 	<section>
 		<h1>Popular Right Now</h1>
 		<div class="carousel">
-			<a href="somewhere" class="movie-poster">
-				<img
-					src="https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg"
-					alt="Poster of Inception"
-				/>
-			</a>
-			<a href="somewhere" class="movie-poster">
-				<img
-					src="https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg"
-					alt="Poster of Inception"
-				/>
-			</a>
-			<a href="somewhere" class="movie-poster">
-				<img
-					src="https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg"
-					alt="Poster of Inception"
-				/>
-			</a>
-			<a href="somewhere" class="movie-poster">
-				<img
-					src="https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg"
-					alt="Poster of Inception"
-				/>
-			</a>
-			<a href="somewhere" class="movie-poster">
-				<img
-					src="https://m.media-amazon.com/images/I/71uKM+LdgFL._AC_UF894,1000_QL80_.jpg"
-					alt="Poster of Inception"
-				/>
-			</a>
+			{#each popularData as data}
+				<a href="movies/{data.slug}" class="movie-poster">
+					<img src={data.src} alt="Poster of Inception" />
+				</a>
+			{/each}
 		</div>
 	</section>
 	<section>
