@@ -3,6 +3,7 @@
 
 	let isInView = false;
 	let backgroundVideo;
+
 	const options = {
 		threshold: 0.5
 	};
@@ -10,13 +11,11 @@
 	const videoEnter = () => {
 		isInView = true;
 		backgroundVideo.play();
-		console.log('video is visible');
 	};
 
 	const videoLeave = () => {
 		isInView = false;
 		backgroundVideo.pause();
-		console.log('video is NOT visible');
 	};
 
 	export let title = 'Shawshank Redemption';

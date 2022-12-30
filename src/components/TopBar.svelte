@@ -6,7 +6,11 @@
 			<input type="text" placeholder="Search..." />
 		</div>
 	</form>
-	<img class="profilePic" alt="profile" src="test" />
+	<img
+		class="profilePic"
+		alt="profile"
+		src="https://images.pexels.com/photos/3226441/pexels-photo-3226441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+	/>
 </div>
 
 <style lang="sass">

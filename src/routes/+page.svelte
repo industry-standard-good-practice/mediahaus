@@ -1,7 +1,6 @@
 <script>
 	import ForYouCard from '../components/ForYouCard.svelte';
-	import FriendCard from '../components/FriendCard.svelte';
-	import TopBar from '../components/TopBar.svelte';
+	import FollowingCard from '../components/FollowingCard.svelte';
 
 	let posts = [
 		{
@@ -50,9 +49,9 @@
 
 	let forYouData = [
 		{
-			title: 'Shawshank Redemption',
-			score: '89% Rotten Tomatoes',
-			src: 'https://vod-progressive.akamaized.net/exp=1672422479~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4680%2F7%2F198403893%2F668129116.mp4~hmac=f4a7d227e6fcb3374725f65741c441793cc91981e0310443925f2f367b28bab4/vimeo-prod-skyfire-std-us/01/4680/7/198403893/668129116.mp4'
+			title: 'Babylon',
+			score: '55% Rotten Tomatoes',
+			src: 'https://download-video.akamaized.net/2/playback/af2084df-c699-46ed-8fdf-450e45d1754d/152e9f39-56d4d48d?__token__=st=1672424104~exp=1672438504~acl=%2F2%2Fplayback%2Faf2084df-c699-46ed-8fdf-450e45d1754d%2F152e9f39-56d4d48d%2A~hmac=7925a70ad1b810a5805fc5663b387dd6e7e5a5dafdcd01bcf8ea08024f5a388e&r=dXMtY2VudHJhbDE%3D'
 		},
 		{
 			title: 'Her',
@@ -60,9 +59,9 @@
 			src: 'https://vod-progressive.akamaized.net/exp=1672432727~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4960%2F7%2F199804666%2F674256539.mp4~hmac=958c6e6f5dfb27a11aa23837800efd1893412718abebf580f6fe527c3f547ccc/vimeo-prod-skyfire-std-us/01/4960/7/199804666/674256539.mp4'
 		},
 		{
-			title: 'Shawshank Redemption',
+			title: 'The Batman',
 			score: '89% Rotten Tomatoes',
-			src: 'https://vod-progressive.akamaized.net/exp=1672422479~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4680%2F7%2F198403893%2F668129116.mp4~hmac=f4a7d227e6fcb3374725f65741c441793cc91981e0310443925f2f367b28bab4/vimeo-prod-skyfire-std-us/01/4680/7/198403893/668129116.mp4'
+			src: 'https://vod-progressive.akamaized.net/exp=1672438659~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2101%2F26%2F660505832%2F3036337154.mp4~hmac=deafacc4c323fdb1ec0dfe692fa79374992bf636ea0c5df3d958eb728c27f7d2/vimeo-prod-skyfire-std-us/01/2101/26/660505832/3036337154.mp4?filename=file.mp4'
 		}
 	];
 
@@ -90,7 +89,6 @@
 	];
 </script>
 
-<TopBar />
 <div class="feed">
 	<section>
 		<h1>For You</h1>
@@ -111,9 +109,9 @@
 		</div>
 	</section>
 	<section>
-		<h1>Friends</h1>
+		<h1>Following</h1>
 		{#each posts as post}
-			<FriendCard {...post} />
+			<FollowingCard {...post} />
 		{/each}
 	</section>
 </div>
@@ -139,6 +137,7 @@
 		--background: #1F1A1D
 		--on-background: #EAE0E4
 		--surface-1: #31262E
+		--surface-2: #554050
 
 	:global(body)
 		background: var(--background)
