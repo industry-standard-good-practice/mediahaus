@@ -1,4 +1,22 @@
-<div class="topBar">
+<script>
+	let lastScrollTop = 0;
+	let windowOffset;
+	let topBar;
+
+	const toggleNav = () => {
+		let st = windowOffset.pageYOffset || document.documentElement.scrollTop;
+		if (st > lastScrollTop) {
+			topBar.style.top = '-100%';
+		} else {
+			topBar.style.top = '0';
+		}
+		lastScrollTop = st;
+	};
+</script>
+
+<svelte:window on:scroll={toggleNav} bind:scrollY={windowOffset} />
+
+<div class="topBar" bind:this={topBar}>
 	<img src="images/logo.svg" alt="logo" class="logo" />
 	<form method="get" action="">
 		<div class="searchBox">
@@ -28,6 +46,7 @@
 		align-items: center
 		justify-content: space-between
 		gap: 16px
+		transition: top .6s ease
 	
 	.logo 
 		width: 64px

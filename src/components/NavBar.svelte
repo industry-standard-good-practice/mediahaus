@@ -1,4 +1,22 @@
-<nav>
+<script>
+	let lastScrollTop = 0;
+	let windowOffset;
+	let nav;
+
+	const toggleNav = () => {
+		let st = windowOffset.pageYOffset || document.documentElement.scrollTop;
+		if (st > lastScrollTop) {
+			nav.style.bottom = '-100%';
+		} else {
+			nav.style.bottom = '0';
+		}
+		lastScrollTop = st;
+	};
+</script>
+
+<svelte:window on:scroll={toggleNav} bind:scrollY={windowOffset} />
+
+<nav bind:this={nav}>
 	<a class="tab active" href="/">
 		<div class="iconContainer">
 			<img src="icons/home.svg" alt="Home icon" />
@@ -25,6 +43,7 @@
 		background: var(--surface-1)
 		padding: 16px
 		padding-top: 12px
+		transition: bottom .65s ease
 
 		p
 			font-style: normal

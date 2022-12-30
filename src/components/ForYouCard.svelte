@@ -20,8 +20,7 @@
 
 	export let title = 'Shawshank Redemption';
 	export let score = '89% Rotten Tomatoes';
-	export let src =
-		'https://vod-progressive.akamaized.net/exp=1672422479~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4680%2F7%2F198403893%2F668129116.mp4~hmac=f4a7d227e6fcb3374725f65741c441793cc91981e0310443925f2f367b28bab4/vimeo-prod-skyfire-std-us/01/4680/7/198403893/668129116.mp4';
+	export let src = 'something';
 </script>
 
 <a
